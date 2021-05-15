@@ -171,7 +171,7 @@
         <!--View Controller-->
         <scene sceneID="QA0-i9-qPa">
             <objects>
-                <viewController id="wlh-lz-B75" sceneMemberID="viewController">
+                <viewController id="wlh-lz-B75" customClass="ViewController" customModule="PointSystem" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Ts-y6-RMJ">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
