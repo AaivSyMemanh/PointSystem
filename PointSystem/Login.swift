@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Login {
+class GetDataFromServer {
 func LoginWithUsernameandPassword(Username:String!,Password:String!) -> String {
     print(Username)
     print(Password)
@@ -35,4 +35,7 @@ func LoginWithUsernameandPassword(Username:String!,Password:String!) -> String {
         return "NetworkError"
     }
 }
+    func getpointsLog(){
+        var pointlogs[]:pointlog
+    }
 }

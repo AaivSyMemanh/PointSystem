@@ -16,6 +16,7 @@ class ViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var activity: UIActivityIndicatorView!
     @IBOutlet weak var Username: UITextField!
     @IBOutlet weak var Password: UITextField!
+    var account:Account?
     override func viewDidLoad() {
         super.viewDidLoad()
         self.Username.returnKeyType = UIReturnKeyType.next
@@ -31,6 +32,10 @@ class ViewController: UIViewController,UITextFieldDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+  //      var vc = segue.destination as! NavigationController
+    //    vc.account = sender as! Account
+    //}
     func textFieldShouldReturn(_ textField: UITextField) -> Bool
     {
         //收起键盘
@@ -41,6 +46,10 @@ class ViewController: UIViewController,UITextFieldDelegate {
             LoginButtonPressed(uibutton)
         }
         return true;
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let listview = segue.destination as! ListViewController
+        listview.account = self.account
     }
     @IBAction func LoginButtonPressed(_ sender: UIButton) {
         self.uibutton.isEnabled = false
@@ -73,6 +82,7 @@ class ViewController: UIViewController,UITextFieldDelegate {
             print(2)
             let decoder = JSONDecoder()
             let over = try! decoder.decode(Account.self,from: last.data(using: .utf8)!)
+            self.account = over
             let permission = Int(over.permission)!
             if(permission>0){
                 print(permission)

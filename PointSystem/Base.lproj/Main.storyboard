@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Opw-CN-5tQ">
     <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wQH-Qz-vAn">
-                                <rect key="frame" x="20" y="527" width="728" height="30"/>
+                                <rect key="frame" x="20" y="549" width="728" height="30"/>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <connections>
@@ -28,19 +28,19 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="用户名" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1ud-Jb-KJK">
-                                <rect key="frame" x="20" y="487" width="728" height="30"/>
+                                <rect key="frame" x="20" y="509" width="728" height="30"/>
                                 <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="登录至 操行分管理系统" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.01" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C22-Hc-yPT">
-                                <rect key="frame" x="20" y="281.5" width="727.5" height="84"/>
+                                <rect key="frame" x="20" y="298" width="727.5" height="84"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="70"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5P-gU-fTp">
-                                <rect key="frame" x="20" y="701" width="61" height="48"/>
+                                <rect key="frame" x="20" y="728.5" width="61" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="登录"/>
                                 <connections>
@@ -64,13 +64,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Fj9-tw-E7O"/>
                     <connections>
                         <outlet property="Password" destination="wQH-Qz-vAn" id="Cow-Og-9Dj"/>
                         <outlet property="Username" destination="1ud-Jb-KJK" id="C7F-hP-6uL"/>
                         <outlet property="activity" destination="do6-iN-9KK" id="zzu-8W-RTS"/>
                         <outlet property="uibutton" destination="R5P-gU-fTp" id="TDw-4B-gcj"/>
-                        <segue destination="Emy-be-z2p" kind="presentation" identifier="has" id="erf-nd-pnK"/>
-                        <segue destination="Opw-CN-5tQ" kind="presentation" identifier="hasnot" id="iX8-FS-qqJ"/>
+                        <segue destination="Emy-be-z2p" kind="modal" identifier="has" id="erf-nd-pnK"/>
+                        <segue destination="wlh-lz-B75" kind="modal" identifier="hasnot" id="pmP-Xi-uHH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -79,12 +80,12 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </activityIndicatorView>
             </objects>
-            <point key="canvasLocation" x="148" y="13"/>
+            <point key="canvasLocation" x="200" y="-96"/>
         </scene>
-        <!--View Controller-->
+        <!--List View Controller-->
         <scene sceneID="4Ga-TJ-EhS">
             <objects>
-                <viewController id="Emy-be-z2p" sceneMemberID="viewController">
+                <viewController id="Emy-be-z2p" customClass="ListViewController" customModule="PointSystem" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vvC-tF-PdN">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -147,6 +148,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1ou-74-wKI"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Tzr-wq-Ruj"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7FT-cG-09Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -161,23 +163,23 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="wlh-lz-B75" kind="relationship" relationship="rootViewController" id="QtW-pz-nQQ"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="G8L-lW-0qE"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mzO-xA-Tbd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1022" y="443"/>
+            <point key="canvasLocation" x="-523" y="-96"/>
         </scene>
-        <!--View Controller-->
+        <!--List View Controller-->
         <scene sceneID="QA0-i9-qPa">
             <objects>
-                <viewController id="wlh-lz-B75" customClass="ViewController" customModule="PointSystem" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wlh-lz-B75" customClass="ListViewController" customModule="PointSystem" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Ts-y6-RMJ">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="欢迎" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LSI-y4-rkq">
-                                <rect key="frame" x="16" y="80" width="61" height="36"/>
+                                <rect key="frame" x="16" y="36" width="61" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -186,7 +188,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="你的操行分" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Crg-BP-Srg">
-                                <rect key="frame" x="16" y="124" width="152" height="36"/>
+                                <rect key="frame" x="16" y="80" width="152" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -195,7 +197,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="本周你的操行分" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OmX-9c-ANe">
-                                <rect key="frame" x="16" y="168" width="212.5" height="36"/>
+                                <rect key="frame" x="16" y="124" width="212.5" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -204,11 +206,11 @@
                                 </variation>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RSV-xd-DuT">
-                                <rect key="frame" x="16" y="220" width="736" height="788"/>
+                                <rect key="frame" x="16" y="176" width="736" height="832"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hzw-dr-EJ9">
-                                <rect key="frame" x="106" y="97" width="257" height="90"/>
+                                <rect key="frame" x="236" y="70" width="257" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Button"/>
@@ -233,10 +235,15 @@
                         <viewLayoutGuide key="safeArea" id="Cny-gy-aG7"/>
                     </view>
                     <navigationItem key="navigationItem" id="1IH-Oa-wIJ"/>
+                    <connections>
+                        <outlet property="pointText" destination="Crg-BP-Srg" id="HOU-ta-9Ry"/>
+                        <outlet property="weekpointText" destination="OmX-9c-ANe" id="gJD-LE-ELk"/>
+                        <outlet property="welcomeText" destination="LSI-y4-rkq" id="tpA-ZB-IhD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Klg-cg-NA3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1831" y="443"/>
+            <point key="canvasLocation" x="1022" y="319"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="MxJ-Lj-Lxa">
@@ -252,7 +259,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="idl-jr-siy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2553.90625" y="442.96874999999994"/>
+            <point key="canvasLocation" x="1801" y="319"/>
         </scene>
     </scenes>
 </document>
