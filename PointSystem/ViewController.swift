@@ -11,7 +11,7 @@ import Foundation
 
 class ViewController: UIViewController,UITextFieldDelegate {
 
-    var login = Login()
+    var server = GetDataFromServer()
     @IBOutlet weak var uibutton: UIButton!
     @IBOutlet weak var activity: UIActivityIndicatorView!
     @IBOutlet weak var Username: UITextField!
@@ -60,7 +60,7 @@ class ViewController: UIViewController,UITextFieldDelegate {
         queue.async {
         print(self.Username.text!)
             print(self.Password.text!)
-        var last = self.login.LoginWithUsernameandPassword(Username: self.Username.text!, Password: self.Password.text!)
+        var last = self.server.LoginWithUsernameandPassword(Username: self.Username.text!, Password: self.Password.text!)
         print(last)
         if(last == "Failed"){
             self.activity.stopAnimating()

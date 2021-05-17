@@ -35,7 +35,8 @@ func LoginWithUsernameandPassword(Username:String!,Password:String!) -> String {
         return "NetworkError"
     }
 }
-    func getpointsLog(){
-        var pointlogs[]:pointlog
+    func getpointsLog(id:String!,password:String!)->Array<pointlog>{
+        var pointlogs:Array = [pointlog]()
+        return pointlogs
     }
 }
