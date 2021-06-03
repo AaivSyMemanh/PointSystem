@@ -237,6 +237,7 @@
                     <navigationItem key="navigationItem" id="1IH-Oa-wIJ"/>
                     <connections>
                         <outlet property="pointText" destination="Crg-BP-Srg" id="HOU-ta-9Ry"/>
+                        <outlet property="tableView" destination="RSV-xd-DuT" id="Oc1-Ph-XJ3"/>
                         <outlet property="weekpointText" destination="OmX-9c-ANe" id="gJD-LE-ELk"/>
                         <outlet property="welcomeText" destination="LSI-y4-rkq" id="tpA-ZB-IhD"/>
                     </connections>

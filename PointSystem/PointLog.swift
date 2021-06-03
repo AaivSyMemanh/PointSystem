@@ -8,11 +8,11 @@
 
 import Foundation
 
-struct pointlog{
-    var id:Int16
-    var ida:Int16
-    var idb:Int16
-    var pointchange:Int16
-    var time:Int64
+struct pointlog :Codable{
+    var id:String
+    var ida:String
+    var idb:String
+    var pointchange:String
+    var time:String
     var cause:String
 }

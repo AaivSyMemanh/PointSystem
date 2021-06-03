@@ -7,18 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		560D35B61F84B15C005A2E4D /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560D35B51F84B15C005A2E4D /* Login.swift */; };
+		560D35B61F84B15C005A2E4D /* GetDataFromServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560D35B51F84B15C005A2E4D /* GetDataFromServer.swift */; };
 		561CAEB11F83756F0014E477 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561CAEB01F83756F0014E477 /* AppDelegate.swift */; };
 		561CAEB31F83756F0014E477 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561CAEB21F83756F0014E477 /* ViewController.swift */; };
 		561CAEB81F83756F0014E477 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 561CAEB71F83756F0014E477 /* Assets.xcassets */; };
 		561CAEBB1F83756F0014E477 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 561CAEB91F83756F0014E477 /* LaunchScreen.storyboard */; };
 		561CAEE71F837D8B0014E477 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 561CAEE51F837D8B0014E477 /* Main.storyboard */; };
+		5695DC541F9106B80058D2A7 /* ResultPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5695DC531F9106B80058D2A7 /* ResultPackage.swift */; };
+		5695DC561F9109EC0058D2A7 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5695DC551F9109EC0058D2A7 /* Account.swift */; };
 		F01B8D6B1F8CD13300F27DFB /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01B8D6A1F8CD13300F27DFB /* ListViewController.swift */; };
 		F0FB4D251F8F347700409A91 /* PointLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FB4D241F8F347700409A91 /* PointLog.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		560D35B51F84B15C005A2E4D /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		560D35B51F84B15C005A2E4D /* GetDataFromServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDataFromServer.swift; sourceTree = "<group>"; };
 		561CAEAD1F83756F0014E477 /* PointSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PointSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		561CAEB01F83756F0014E477 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		561CAEB21F83756F0014E477 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +28,8 @@
 		561CAEBA1F83756F0014E477 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		561CAEBC1F83756F0014E477 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		561CAEE61F837D8B0014E477 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5695DC531F9106B80058D2A7 /* ResultPackage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultPackage.swift; sourceTree = "<group>"; };
+		5695DC551F9109EC0058D2A7 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		F01B8D6A1F8CD13300F27DFB /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		F0FB4D241F8F347700409A91 /* PointLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointLog.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,9 +70,11 @@
 				561CAEB71F83756F0014E477 /* Assets.xcassets */,
 				561CAEB91F83756F0014E477 /* LaunchScreen.storyboard */,
 				561CAEBC1F83756F0014E477 /* Info.plist */,
-				560D35B51F84B15C005A2E4D /* Login.swift */,
+				560D35B51F84B15C005A2E4D /* GetDataFromServer.swift */,
 				F01B8D6A1F8CD13300F27DFB /* ListViewController.swift */,
 				F0FB4D241F8F347700409A91 /* PointLog.swift */,
+				5695DC531F9106B80058D2A7 /* ResultPackage.swift */,
+				5695DC551F9109EC0058D2A7 /* Account.swift */,
 			);
 			path = PointSystem;
 			sourceTree = "<group>";
@@ -146,10 +152,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0FB4D251F8F347700409A91 /* PointLog.swift in Sources */,
-				560D35B61F84B15C005A2E4D /* Login.swift in Sources */,
+				5695DC541F9106B80058D2A7 /* ResultPackage.swift in Sources */,
+				560D35B61F84B15C005A2E4D /* GetDataFromServer.swift in Sources */,
 				561CAEB31F83756F0014E477 /* ViewController.swift in Sources */,
 				F01B8D6B1F8CD13300F27DFB /* ListViewController.swift in Sources */,
 				561CAEB11F83756F0014E477 /* AppDelegate.swift in Sources */,
+				5695DC561F9109EC0058D2A7 /* Account.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

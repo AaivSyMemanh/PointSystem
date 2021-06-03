@@ -64,6 +64,7 @@ class ViewController: UIViewController,UITextFieldDelegate {
         print(last)
         if(last == "Failed"){
             self.activity.stopAnimating()
+            self.activity.isHidden = true
             self.uibutton.setTitle("登录", for: .normal)
             self.uibutton.isEnabled = true
             var alertController = UIAlertController(title: "警告", message: "用户名或密码错误", preferredStyle: UIAlertControllerStyle.alert)
@@ -72,6 +73,7 @@ class ViewController: UIViewController,UITextFieldDelegate {
             self.present(alertController, animated: true, completion: nil)
         }else if(last == "NetworkError"){
             self.activity.stopAnimating()
+            self.activity.isHidden = true
             self.uibutton.setTitle("登录", for: .normal)
             self.uibutton.isEnabled = true
             var alertController = UIAlertController(title: "警告", message: "无法连接至服务器", preferredStyle: UIAlertControllerStyle.alert)
@@ -96,12 +98,5 @@ class ViewController: UIViewController,UITextFieldDelegate {
     }
 
 }
-struct Account : Codable{
-    var id: String
-    var username: String
-    var password: String
-    var chinesename: String
-    var points: String
-    var permission: String
-}
+
 
