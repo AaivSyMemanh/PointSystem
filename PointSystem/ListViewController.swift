@@ -30,16 +30,22 @@ class ListViewController:UIViewController,UITableViewDelegate,UITableViewDataSou
         return pointlogsresult!.data.count;
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        self.performSegue(withIdentifier: "detail", sender: self)
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = UITableViewCell()
+        var cell = UITableViewCell(style: .value1, reuseIdentifier: ".value1")
         cell.textLabel?.text = pointlogsresult?.data[indexPath.row]?.cause
         cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
-        var dateformatter = DateFormatter()
-        dateformatter.dateFormat = "yyyy年mm月dd日 HH:mm"
      //   cell.detailTextLabel?.text = dateformatter.string(from: Date(timeIntervalSince1970: TimeInterval(Int(pointlogsresult!.data[indexPath.row]!.time)!)))
-        cell.detailTextLabel?.text = pointlogsresult?.data[indexPath.row]?.pointchange
+        var point:Int
+        var pointStr:String
+        point = Int(pointlogsresult!.data[indexPath.row]!.pointchange)!
+        if(point>0){
+            pointStr = "+"+String(point)
+        }else{
+            pointStr = String(point)
+        }
+        cell.detailTextLabel?.text = pointStr
         return cell
     }
 }
